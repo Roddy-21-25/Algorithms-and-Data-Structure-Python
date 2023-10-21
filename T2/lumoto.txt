@@ -1,0 +1,60 @@
+Aplicar la busqueda "rapida" de: lumoto 
+
+planteamiento:
+necesito crear mi propia version de la version de lomuto.
+
+input:
+[11, 9, 29, 7, 2, 15, 28]
+
+output:
+[2, 7, 9, 11, 15, 28, 29]
+
+step by step:
+
+crear una funcion que reciba los datos
+
+necesito ubicar el pivot
+compararlos con un loop while que tenga como condicion, mientras el p index sea menor que el pivot el p index se movera
+cuando el while se pare necesitamos iniciar un segundo contador i que iniciara despues del p index
+i se debe mover hasta encontrar un elemento que es menor que el pivot el direccion hacia le pivot osea, no sera para atras
+entonces, cuando i sea menor al pivot, el p index y el i se intercambiaran, para eso podriamos crear una funcion swap para hacer el cambio con tres variables
+cuando el 28 se haya cambiado con el 29, te quedara el 29 de un lado y el pivot del otro, cumpliendo la condicion de un qick sort
+
+def swap(start, elements):
+    if not elements[start] == elements[start + 1]:
+        tmp = elements[start]
+        elements[start] = elements[start + 1]
+        elements[start + 1] = tmp
+
+def partition_of_lomuto(elements):
+    last_indice = len(elements) - 1 # buscar el ultimo indice
+    pivot = elements[last_indice]
+    start = 0 # contador para mover el P_INDEX
+    p_index = elements[start] # el P_INDEX que se ira comparando con el pivot
+    #[11, 9, 29, 7, 2, 15, 28]
+    while elements[start] < pivot:
+            while p_index < pivot: 
+                start += 1
+                p_index = elements[start]
+            
+            i = elements[start + 1]
+
+            if i < pivot:
+                swap(start, elements)
+                p_index = i
+                i = elements[start + 1]
+
+            while elements[start] < pivot:
+                start += 1
+                p_index = elements[start]
+                i = elements[start + 1]
+    swap(start, elements)
+
+def lomuto_quick_sort(elements):
+    partition_of_lomuto(elements)
+
+elements = [11, 9, 29, 7, 2, 15, 28] # input
+#elements = [2, 7, 9, 11, 15, 28, 29]  output
+lomuto_quick_sort(elements)
+print(elements)
+

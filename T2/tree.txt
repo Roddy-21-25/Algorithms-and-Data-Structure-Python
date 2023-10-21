@@ -1,0 +1,36 @@
+if __name__ == '__main__':
+    root_node = build_management_tree()
+    root_node.print_tree("name") # prints only name hierarchy
+    root_node.print_tree("designation") # prints only designation hierarchy
+    root_node.print_tree("both") # prints both (name and designation) hierarchy
+
+Roddy (CEO)
+     |__ YOSI (CTO)
+	|__ JENNY (INFRASTRUCTURE HEAD)
+	          |__ ANA (CLOUD MANAGER)
+	          |__ VERCELLI (APP MANAGER)
+	|__ EDDIE (APLICATION HEAD)
+     |__ RAFAEL (HR HEAD)
+	|__ ROSARIO (RECRUITMENT MANAGER)
+	|__ TEJEDA (POLICY MANAGER)
+
+planteamiento:
+necesito imprimir tal cual se muestra los nombres y los rangos es orden.
+necesito imprimirlas por separado cada una
+necesito imprimirlas las dos juntas
+
+input:
+cada nombre y rango por separado en un nodo
+
+output:
+los nombres en orden
+los rangos en orden
+los dos juntos en orden
+
+step by step:
+necesito imprimirlas las dos juntas
+
+
+
+
+

@@ -1,0 +1,30 @@
+        if not before_number == last_number:
+                rotacion += 1
+                veces += 1
+                print(f"la lista se roto: {rotacion + 1}")
+    veces = 1
+    rotacion = 0
+    while begin <= last:
+        # acceder al numero del medio
+        mid_index = (begin + last) // 2
+        next_posicion = mid_index + 1
+
+        #numero del inicio
+        begin_number = nums[begin]
+
+        #numero del medio
+        mid_number = nums[mid_index]
+
+        #numero siguiente
+        next_number = nums[next_posicion]
+
+        #numero anterior
+        before_number = nums[mid_index - veces]
+
+        #numero final
+        last_number = nums[last]
+
+        print(before_number, mid_number, next_number)
+        break
+
+[5, 6, 7, 8, 9, 0, 2, 3, 4]

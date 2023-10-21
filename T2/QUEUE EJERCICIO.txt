@@ -1,0 +1,28 @@
+Escriba un programa para imprimir números binarios del 1 al 10 usando Queue. Use la clase Queue implementada en el tutorial principal.
+
+La secuencia binaria debería verse como,
+
+     1
+     10
+     11
+     100
+     101
+     110
+     111
+     1000
+     1001
+     1010
+
+Sugerencia: observe un patrón arriba.
+
+Después de 1 segundo y tercer número es 1+0 y 1+1. Los números 4 y 5 son el segundo número (es decir, 10) + 0 y el segundo número (es decir, 10) + 1.
+
+También debe agregar la función front() en la clase de cola que puede devolver el elemento frontal en la cola.
+
+planteamiento:
+
+input:
+
+output:
+
+step by step:
